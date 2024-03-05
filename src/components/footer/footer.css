@@ -1,0 +1,153 @@
+footer,
+.footer_cont,
+.foot_bottom,
+.foot_main {
+    width: 100%;
+    color: var(--textAlt);
+}
+
+.footer_cont {
+    background-color: var(--primary);
+}
+
+.foot_main,
+.foot_main_links,
+.foot_main_social,
+.foot_main_form,
+.foot_main_form form,
+.foot_social_list {
+    display: flex;
+}
+
+.foot_main {
+    padding: 2rem 5rem;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.foot_main_form {
+    width: 60%;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.foot_main_form_info h3 {
+    font-size: 30px;
+}
+
+.foot_main_form_info p {
+    font-size: 20px;
+}
+
+.foot_main_form form {
+    width: 100%;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.inp_ctrl input {
+    width: 300px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.form_btn button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--secondary);
+    border: none;
+    color: var(--textAlt);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.foot_main_links,
+.foot_main_social {
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.foot_social_list {
+    align-items: center;
+    column-gap: 10px;
+}
+
+.foot_icon {
+    font-size: 20px;
+}
+
+.foot_social_list span,
+.foot_main_list span {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.foot_bottom {
+    width: 100%;
+    padding: 2rem 5rem;
+}
+
+.foot_bottom_text h1 {
+    font-size: 140px;
+    font-style: italic;
+    line-height: 120px;
+    padding-bottom: 3rem;
+    border-bottom: 8px double var(--background);
+}
+
+@media (max-width: 928px) {
+    .foot_main {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .foot_main_form,
+    .foot_main_links,
+    .foot_main_social {
+        width: 100%;
+    }
+
+    .form_inputs {
+        width: 70%;
+    }
+
+    .form_btn {
+        width: 30%;
+    }
+
+    .inp_ctrl, .inp_ctrl input, .form_btn button {
+        width: 100%;
+    }
+
+    .foot_bottom_text h1 {
+        font-size: 90px;
+        line-height: 90px;
+    }
+}
+
+@media (max-width: 780px) {
+    .foot_main, .foot_bottom {
+        padding: 2rem 3rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .foot_bottom_text h1 {
+        font-size: 70px;
+        line-height: 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .foot_main, .foot_bottom {
+        padding: 2rem 20px;
+    }
+
+    .land_text_img h1 {
+        font-size: 50px;
+    }
+}

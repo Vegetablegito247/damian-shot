@@ -1,0 +1,153 @@
+header {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+
+.land_head_cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.land_head_image {
+    width: 50%;
+    height: 100%;
+}
+
+.land_head_image:first-child {
+    background: url(../../assets/landPageImg/black_lady.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: var(--textAlt);
+    position: relative;
+}
+
+.land_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--textAlt);
+}
+
+.land_text_img {
+    display: none;
+}
+
+.land_text h1 {
+    font-size: 70px;
+}
+
+.land_text h3 {
+    font-size: 50px;
+    font-style: italic;
+}
+
+.land_text_link {
+    width: 250px;
+    height: 60px;
+    background-color: var(--primary);
+    margin: 3rem auto 0;
+    box-shadow: -5px 5px 0 var(--textAlt);
+}
+
+.land_text_link a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textAlt);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.land_head_image:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+}
+
+.land_img {
+    width: 50%;
+    height: 70%;
+}
+
+.land_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 928px) {
+    .land_text h1 {
+        font-size: 50px;
+    }
+    
+    .land_text h3 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: fit-content;
+    }
+
+    .land_head_cont {
+        flex-direction: column;
+    }
+
+    .land_head_image:first-child {
+        width: 100%;
+        height: 600px;
+    }
+
+    .land_head_image:last-child {
+        width: 100%;
+        height: 400px;
+    }
+
+    .land_img {
+        width: 70%;
+        height: 60%;
+    }
+
+    .land_text {
+        display: none;
+    }
+
+    .land_text_img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        white-space: nowrap;
+        color: var(--textAlt);
+    }
+}
+
+@media (max-width: 680px) {
+    .land_text_img h1 {
+        font-size: 80px;
+    }
+}
