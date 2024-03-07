@@ -148,6 +148,10 @@ main,
     display: flex;
 }
 
+.gallery_type_about_text {
+    z-index: 3;
+}
+
 .gallery_type_about_text h3 {
     font-size: 30px;
     margin-bottom: 10px;

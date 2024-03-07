@@ -199,8 +199,8 @@ function LandMain() {
     };
 
     return (
-        <main>
-            <div className="about" style={{ overflow: 'hidden' }}>
+        <main style={{ overflow: 'hidden' }}>
+            <div className="about">
                 <div className="about_cont">
                     <motion.div
                         initial={{ y: 100, opacity: 0 }}
