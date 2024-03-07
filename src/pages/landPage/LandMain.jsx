@@ -13,6 +13,7 @@ import PrevArrow from '../../util/PrevArrow';
 import NextArrow from '../../util/NextArrow';
 import { RiCameraLensLine } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from 'framer-motion';
 
 function LandMain() {
     const baby = [
@@ -201,20 +202,35 @@ function LandMain() {
         <main>
             <div className="about">
                 <div className="about_cont">
-                    <div className="about_head">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        transition={{ delay: .6, duration: 1, type: 'tween' }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="about_head">
                         <h1>ABOUT DAMIAN</h1>
-                    </div>
+                    </motion.div>
                     <div className="about_info">
-                        <div className="about_text">
+                        <motion.div
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .8, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="about_text">
                             <p>
                                 Damian Glory Chiderah, a dedicated professional, holds a background in microbiology and is currently pursuing studies in kinesiology and health. With a diploma in web development and graphics design, Damian found a passion for photography driven by creativity. Specializing in capturing moments and crafting anime from photographs, Damian is known for resilience and cherishes kindness and passion in others.
                             </p>
-                        </div>
-                        <div className="about_link">
+                        </motion.div>
+                        <motion.div
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: 1, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="about_link">
                             <Link to='/about'>
                                 <span>More About Damian</span>
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
@@ -244,98 +260,193 @@ function LandMain() {
 
             <div className="gallery">
                 <div className="gallery_cont">
-                    <div className="gallery_head">
+                    <motion.div
+                        initial={{ y: 100, opacity: 0 }}
+                        transition={{ delay: .6, duration: 1, type: 'tween' }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        viewport={{ once: true }}
+                        className="gallery_head">
                         <h1>GALLERY & COLLECTION</h1>
-                    </div>
+                    </motion.div>
                     <div className="gallery_type_and_sample">
                         <div className="gallery_type_list">
-                            <div className="gallery_type_head">
+                            <motion.div
+                                initial={{ x: 100, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                                className="gallery_type_head">
                                 <h3>Baby / New born Session</h3>
-                            </div>
+                            </motion.div>
                             <div className="gallery_type_images">
                                 {baby.map((babe) => (
                                     <div key={babe.id} className="gallery_type_info">
                                         <div className="gallery_type_about_text">
-                                            <h3>{babe.head}</h3>
-                                            <p>
+                                            <motion.h3
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >{babe.head}</motion.h3>
+                                            <motion.p
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .8, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >
                                                 {babe.text}
-                                            </p>
-                                            <div className="gallery_type_about_link">
+                                            </motion.p>
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: 1, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_about_link">
                                                 <Link to='/gallery'>
                                                     <span>Explore Gallery</span>
                                                     <FaArrowRight />
                                                 </Link>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                         <div className="gallery_type_image_list">
                                             <div className="gallery_type_img">
-                                                <img src={babe.img} alt="" />
+                                                <motion.img
+                                                    initial={{ scale: 0, opacity: 0 }}
+                                                    transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                    whileInView={{ scale: 1, opacity: 1 }}
+                                                    viewport={{ once: true }}
+                                                    src={babe.img} alt="" />
                                             </div>
-                                            <div className="gallery_type_img_no">
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_img_no">
                                                 <span>0{babe.id}</span>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="gallery_type_list">
-                            <div className="gallery_type_head">
+                            <motion.div
+                                initial={{ x: -100, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                                className="gallery_type_head">
                                 <h3>Family / Group Session</h3>
-                            </div>
+                            </motion.div>
                             <div className="gallery_type_images">
                                 {family.map((babe) => (
                                     <div key={babe.id} className="gallery_type_info">
                                         <div className="gallery_type_about_text">
-                                            <h3>{babe.head}</h3>
-                                            <p>
+                                            <motion.h3
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >{babe.head}</motion.h3>
+                                            <motion.p
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .8, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >
                                                 {babe.text}
-                                            </p>
-                                            <div className="gallery_type_about_link">
-                                                <Link>
+                                            </motion.p>
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: 1, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_about_link">
+                                                <Link to='/gallery'>
                                                     <span>Explore Gallery</span>
                                                     <FaArrowRight />
                                                 </Link>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                         <div className="gallery_type_image_list">
                                             <div className="gallery_type_img">
-                                                <img src={babe.img} alt="" />
+                                                <motion.img
+                                                    initial={{ scale: 0, opacity: 0 }}
+                                                    transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                    whileInView={{ scale: 1, opacity: 1 }}
+                                                    viewport={{ once: true }}
+                                                    src={babe.img} alt="" />
                                             </div>
-                                            <div className="gallery_type_img_no">
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_img_no">
                                                 <span>0{babe.id}</span>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                         </div>
                         <div className="gallery_type_list">
-                            <div className="gallery_type_head">
+                            <motion.div
+                                initial={{ x: 100, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ x: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                                className="gallery_type_head">
                                 <h3>Modelling / Mini Session</h3>
-                            </div>
+                            </motion.div>
                             <div className="gallery_type_images">
                                 {model.map((babe) => (
                                     <div key={babe.id} className="gallery_type_info">
                                         <div className="gallery_type_about_text">
-                                            <h3>{babe.head}</h3>
-                                            <p>
+                                            <motion.h3
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >{babe.head}</motion.h3>
+                                            <motion.p
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .8, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                            >
                                                 {babe.text}
-                                            </p>
-                                            <div className="gallery_type_about_link">
-                                                <Link>
+                                            </motion.p>
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: 1, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_about_link">
+                                                <Link to='/gallery'>
                                                     <span>Explore Gallery</span>
                                                     <FaArrowRight />
                                                 </Link>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                         <div className="gallery_type_image_list">
                                             <div className="gallery_type_img">
-                                                <img src={babe.img} alt="" />
+                                                <motion.img
+                                                    initial={{ scale: 0, opacity: 0 }}
+                                                    transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                    whileInView={{ scale: 1, opacity: 1 }}
+                                                    viewport={{ once: true }}
+                                                    src={babe.img} alt="" />
                                             </div>
-                                            <div className="gallery_type_img_no">
+                                            <motion.div
+                                                initial={{ y: 100, opacity: 0 }}
+                                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                                whileInView={{ y: 0, opacity: 1 }}
+                                                viewport={{ once: true }}
+                                                className="gallery_type_img_no">
                                                 <span>0{babe.id}</span>
-                                            </div>
+                                            </motion.div>
                                         </div>
                                     </div>
                                 ))}
@@ -371,16 +482,36 @@ function LandMain() {
             <div className="view_services_pricing">
                 <div className="view_services_pricing_cont">
                     <div className="view_services_pricing_img">
-                        <img src={girlCam} alt="View Services and Pricing" />
+                        <motion.img
+                            initial={{ scale: 0, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{ once: true }}
+                            src={girlCam} alt="View Services and Pricing" />
                     </div>
                     <div className="view_services_pricing_info">
-                        <h3>View Services and Pricing</h3>
-                        <p>
+                        <motion.h3
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >Services and Pricing</motion.h3>
+                        <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .8, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
                             Explore our range of photography services and pricing options to find the perfect fit for your needs. Whether you're looking for individual sessions, family portraits, or corporate headshots, we've got you covered.
-                        </p>
-                        <div className="view_services_pricing_link">
+                        </motion.p>
+                        <motion.div
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="view_services_pricing_link">
                             <Link to="/pricing">Check Pricing</Link>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
