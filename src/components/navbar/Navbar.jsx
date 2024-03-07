@@ -10,6 +10,15 @@ function Navbar() {
         setOpenMenu(!openMenu);
     }
 
+    // Handling scroll to footer
+    const scrollToFooter = (idTag) => {
+        const element = document.getElementById(idTag);
+        element.scrollIntoView({ behavior: 'smooth' });
+        if(openMenu) {
+            setOpenMenu(!openMenu);
+        };
+    }
+
     return (
         <nav>
             <div className="nav_cont">
@@ -36,7 +45,7 @@ function Navbar() {
                                 <span>Pricing & Services</span>
                             </NavLink>
                         </li>
-                        <li onClick={handleMenu}>
+                        <li onClick={() => scrollToFooter('contact')}>
                             <NavLink>
                                 <span>Contact</span>
                             </NavLink>

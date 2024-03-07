@@ -43,6 +43,13 @@ nav {
 }
 
 @media (max-width: 928px) {
+    nav {
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: 10;
+    }
+
     .nav_close, .nav_burger {
         width: 40px;
         height: 40px;

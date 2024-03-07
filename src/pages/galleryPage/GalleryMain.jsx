@@ -72,6 +72,7 @@ function GalleryMain() {
 
                 <motion.div
                     transition={{ delay: .6, duration: 1, type: 'tween', staggerChildren: .4 }}
+                    viewport={{ once: true }}
                     className="gallery_main_img_col">
                     {
                         gallery.map((gal, index) => (
