@@ -1,0 +1,180 @@
+.about_me_main,
+.faqs,
+.view_services_pricing {
+    width: 100%;
+    color: var(--text);
+}
+
+.about_me_damian {
+    width: 100%;
+}
+
+.about_main_cont,
+.faq_cont,
+.view_services_pricing_cont {
+    padding: 5rem;
+}
+
+.about_main_head h1,
+.faq_head h1 {
+    font-size: 50px;
+}
+
+.about_main_text p,
+.view_services_pricing_info p {
+    font-size: 22px;
+}
+
+/* FAQS */
+.faq {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0 0 2rem;
+    border-bottom: 8px double var(--textAlt);
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.question h3,
+.view_services_pricing_info h3 {
+    font-size: 40px;
+    font-style: italic;
+}
+
+.question h3 {
+    width: 80%;
+}
+
+.questionIcon {
+    font-weight: 800;
+    font-size: 35px;
+    transition: transform .8s ease;
+    width: 20%;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .8s ease;
+}
+
+.answer p {
+    padding: 1rem 0 0;
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.answer.active {
+    height: auto;
+    max-height: 300px;
+}
+
+.questionIcon.active {
+    transform: rotate(45deg);
+}
+
+/* Services and Pricing */
+.view_services_pricing_cont {
+    display: flex;
+    height: 600px;
+    background-color: var(--secondary);
+}
+
+.view_services_pricing_img,
+.view_services_pricing_info {
+    width: 50%;
+    height: 100%;
+}
+
+.view_services_pricing_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.view_services_pricing_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 40px;
+    color: var(--textAlt);
+}
+
+.view_services_pricing_link {
+    width: 250px;
+    height: 60px;
+    background-color: var(--primary);
+    margin: 24px 0 0;
+    box-shadow: -5px 5px 0 var(--textAlt);
+}
+
+.view_services_pricing_link a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--textAlt);
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+@media (max-width: 780px) {
+
+    .about_main_cont,
+    .faq_cont,
+    .view_services_pricing_cont {
+        padding: 4rem 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .about_main_cont,
+    .faq_cont,
+    .view_services_pricing_cont {
+        padding: 4rem 20px;
+    }
+
+    .view_services_pricing_cont {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        height: fit-content;
+        background-color: var(--secondary);
+    }
+
+    .view_services_pricing_img,
+    .view_services_pricing_info {
+        width: 100%;
+    }
+
+    .view_services_pricing_img {
+        height: 500px;
+    }
+
+    .view_services_pricing_info {
+        padding: 0;
+    }
+}
+
+@media (max-width: 428px) {
+    .about_main_head h1 {
+        font-size: 40px;
+    }
+
+    .question h3 {
+        font-size: 30px;
+    }
+
+    .answer p {
+        font-size: 18px;
+    }
+}

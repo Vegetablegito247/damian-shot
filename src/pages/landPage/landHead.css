@@ -16,7 +16,7 @@ header {
 }
 
 .land_head_image:first-child {
-    background: url(../../assets/landPageImg/black_lady.png);
+    background: url(../../assets/aboutImg/damian3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -51,6 +51,10 @@ header {
 .land_text h3 {
     font-size: 50px;
     font-style: italic;
+}
+
+.land_text h1, .land_text h3 {
+    text-shadow: -2px 2px 2px var(--secondary);
 }
 
 .land_text_link {

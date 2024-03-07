@@ -3,13 +3,11 @@ import './landMain.css';
 import { Link } from 'react-router-dom';
 import baby1 from '../../assets/landPageImg/baby1.png';
 import baby2 from '../../assets/landPageImg/baby2.png';
-import baby3 from '../../assets/landPageImg/baby3.png';
 import family1 from '../../assets/landPageImg/family1.png';
-import family2 from '../../assets/landPageImg/family2.png';
 import family3 from '../../assets/landPageImg/family3.png';
-import model1 from '../../assets/landPageImg/model1.png';
 import model2 from '../../assets/landPageImg/model2.png';
 import model3 from '../../assets/landPageImg/model3.png';
+import girlCam from '../../assets/landPageImg/girl_cam1.png';
 import Slider from "react-slick";
 import PrevArrow from '../../util/PrevArrow';
 import NextArrow from '../../util/NextArrow';
@@ -29,12 +27,6 @@ function LandMain() {
             head: 'Nature\'s Poetry',
             text: 'Babies, nature\'s poetry in flesh and blood, whisper secrets of the universe with every breath. Their laughter, like gentle ripples on a serene pond, soothes weary souls. Their innocence, a reminder of life\'s beauty, renews faith in the goodness of humanity.',
             img: baby2
-        },
-        {
-            id: 3,
-            head: 'Guardians of Tomorrow',
-            text: 'Babies, guardians of tomorrow, hold the keys to our collective destiny. In their tender embrace lies the promise of a better world. With each milestone, they rewrite the story of humanity, shaping it with love, compassion, and boundless potential.',
-            img: baby3
         }
     ];
 
@@ -47,12 +39,6 @@ function LandMain() {
         },
         {
             id: 2,
-            head: 'Roots of Belonging',
-            text: 'Family, the roots of belonging that anchor souls in a world of fleeting moments. They weave stories of heritage, passing down traditions like precious heirlooms. With each generation, they grow stronger, nurturing the seeds of love and resilience.',
-            img: family2
-        },
-        {
-            id: 3,
             head: 'Harmony of Hearts',
             text: 'Family, a harmony of hearts that dances to the rhythm of life\'s melodies. In their laughter echoes the symphony of joy, in their tears, the refrain of empathy. Together, they create a tapestry of memories, woven with threads of love and togetherness.',
             img: family3
@@ -62,18 +48,12 @@ function LandMain() {
     const model = [
         {
             id: 1,
-            head: 'Elegance Redefined',
-            text: 'Models, epitomes of elegance, grace the world\'s stage with poise and allure. Each step, a ballet of confidence, each glance, a spell of enchantment. They redefine beauty, celebrating diversity and individuality with every strut.',
-            img: model1,
-        },
-        {
-            id: 2,
             head: 'Expression Unleashed',
             text: 'Models, artisans of expression, paint the canvas of fashion with creativity and passion. Through their poses, they tell stories untold, conveying emotions with every gesture. They break boundaries, challenging norms and redefining standards of beauty.',
             img: model2
         },
         {
-            id: 3,
+            id: 2,
             head: 'Icons of Inspiration',
             text: 'Models, icons of inspiration, inspire millions with their confidence and charisma. In their diversity, they find unity, embracing uniqueness as a source of strength. They pave the way for change, advocating for inclusivity and representation in every runway.',
             img: model3
@@ -231,8 +211,8 @@ function LandMain() {
                             </p>
                         </div>
                         <div className="about_link">
-                            <Link>
-                                <span>Schedule Appointment</span>
+                            <Link to='/about'>
+                                <span>More About Damian</span>
                             </Link>
                         </div>
                     </div>
@@ -281,7 +261,7 @@ function LandMain() {
                                                 {babe.text}
                                             </p>
                                             <div className="gallery_type_about_link">
-                                                <Link>
+                                                <Link to='/gallery'>
                                                     <span>Explore Gallery</span>
                                                     <FaArrowRight />
                                                 </Link>
@@ -388,7 +368,24 @@ function LandMain() {
                 </div>
             </div>
 
-            <div className="price_and_service">
+            <div className="view_services_pricing">
+                <div className="view_services_pricing_cont">
+                    <div className="view_services_pricing_img">
+                        <img src={girlCam} alt="View Services and Pricing" />
+                    </div>
+                    <div className="view_services_pricing_info">
+                        <h3>View Services and Pricing</h3>
+                        <p>
+                            Explore our range of photography services and pricing options to find the perfect fit for your needs. Whether you're looking for individual sessions, family portraits, or corporate headshots, we've got you covered.
+                        </p>
+                        <div className="view_services_pricing_link">
+                            <Link to="/pricing">Check Pricing</Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className="price_and_service">
                 <div className="price_and_service_cont">
                     <div className="price_and_service_head">
                         <h1>PRICING AND SERVICES</h1>
@@ -422,19 +419,6 @@ function LandMain() {
                             ))
                         }
                     </Slider>
-                </div>
-            </div>
-
-            {/* <div className="testimonial">
-                <div className="testimonial_cont">
-                    <div className="testimonial_head">
-                        <h1>TESTIMONIAL</h1>
-                    </div>
-                    <div className="testimonial_carousel">
-                        <div className="testimonial_list">
-
-                        </div>
-                    </div>
                 </div>
             </div> */}
         </main>

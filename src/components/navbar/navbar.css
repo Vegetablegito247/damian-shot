@@ -18,6 +18,11 @@ nav {
     background-color: var(--secondary);
 }
 
+.nav_logo {
+    text-decoration: none;
+    color: var(--textAlt);
+}
+
 .nav_logo h3 {
     font-style: italic;
 }

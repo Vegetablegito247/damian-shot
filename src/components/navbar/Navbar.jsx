@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdClose } from "react-icons/md";
 import './navbar.css';
@@ -13,26 +13,26 @@ function Navbar() {
     return (
         <nav>
             <div className="nav_cont">
-                <div className="nav_logo">
+                <Link to='/' className="nav_logo">
                     <h3>D_PHOTOGRAPHY</h3>
-                </div>
+                </Link>
                 <div className={openMenu ? "nav_menu active" : "nav_menu"}>
                     <div className="nav_close" onClick={handleMenu}>
                         <MdClose />
                     </div>
                     <ul className="nav_links">
                         <li onClick={handleMenu}>
-                            <NavLink>
+                            <NavLink to='/about'>
                                 <span>About</span>
                             </NavLink>
                         </li>
                         <li onClick={handleMenu}>
-                            <NavLink>
-                                <span>Events</span>
+                            <NavLink to='/gallery'>
+                                <span>Gallery</span>
                             </NavLink>
                         </li>
                         <li onClick={handleMenu}>
-                            <NavLink>
+                            <NavLink to=''>
                                 <span>Pricing & Services</span>
                             </NavLink>
                         </li>
