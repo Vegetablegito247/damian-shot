@@ -79,10 +79,12 @@ function GalleryMain() {
                                 initial={{ y: 100, opacity: 0 }}
                                 transition={{ delay: index / 2, duration: 1, type: 'tween', staggerChildren: .4 }}
                                 whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true }}
                                 className="gallery_main_img_list">
                                 <motion.img
                                     initial={{ scale: 0, opacity: 0 }}
                                     whileInView={{ scale: 1, opacity: 1 }}
+                                    viewport={{ once: true }}
                                     src={gal.img} alt="" />
                             </motion.div>
                         ))
