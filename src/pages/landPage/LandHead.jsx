@@ -28,7 +28,7 @@ function LandHead() {
                             viewport={{ once: false }}
                         >Through the Lens</motion.h3>
                         <div className="land_text_link">
-                            <Link>Book A Session</Link>
+                            <Link to='https://lensofdamiano.pixieset.com/booking'>Book A Session</Link>
                         </div>
                     </div>
                 </div>

@@ -43,7 +43,7 @@ function GalleryMain() {
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         className="gallery_img_main_book">
-                        <Link>Book A Session</Link>
+                        <Link to='https://lensofdamiano.pixieset.com/booking'>Book A Session</Link>
                     </motion.div>
                 </div>
 
