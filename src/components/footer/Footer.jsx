@@ -39,7 +39,7 @@ function Footer() {
                         <Link to='/gallery' className="foot_main_list">
                             <span>Gallery</span>
                         </Link>
-                        <Link to='' className="foot_main_list">
+                        <Link to='https://lensofdamiano.pixieset.com/booking' className="foot_main_list">
                             <span>Pricing & Services</span>
                         </Link>
                     </div>

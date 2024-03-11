@@ -122,7 +122,7 @@ function AboutMain() {
               whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
               className="view_services_pricing_link">
-              <Link to="/pricing">Check Pricing</Link>
+              <Link to="https://lensofdamiano.pixieset.com/booking">Check Pricing</Link>
             </motion.div>
           </div>
         </div>

@@ -41,7 +41,7 @@ function Navbar() {
                             </NavLink>
                         </li>
                         <li onClick={handleMenu}>
-                            <NavLink to=''>
+                            <NavLink to='https://lensofdamiano.pixieset.com/booking'>
                                 <span>Pricing & Services</span>
                             </NavLink>
                         </li>

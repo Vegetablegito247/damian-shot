@@ -64,7 +64,7 @@ function LandHead() {
                     whileInView={{ x: 0, opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    <Link>Book A Session</Link>
+                    <Link to='https://lensofdamiano.pixieset.com/booking'>Book A Session</Link>
                 </motion.div>
             </div>
         </header>
