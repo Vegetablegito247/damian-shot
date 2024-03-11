@@ -56,9 +56,12 @@ const gallerySlice = createSlice({
     reducers: {
         addImage: (state, action) => {
             state.galleries.push(...action.payload);
+        },
+        delImage: (state, action) => {
+            state.galleries = state.galleries.filter(image => image.id !== action.payload);
         }
     }
 });
 
 export default gallerySlice.reducer;
-export const { addImage } = gallerySlice.actions;
+export const { addImage, delImage } = gallerySlice.actions;

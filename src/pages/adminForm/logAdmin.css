@@ -1,0 +1,68 @@
+.form_admin {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_cont {
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+}
+
+.form_cont, .form_main, .form_inp {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_head h1 {
+    font-style: italic;
+    font-size: 50px;
+    text-transform: capitalize !important;
+}
+
+.form_main {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--secondary);
+    box-shadow: -8px 8px 0 var(--primary);
+    align-items: center;
+    row-gap: 20px;
+}
+
+.form_inp {
+    row-gap: 10px;
+    width: 100%;
+}
+
+.inp_ctrl, .inp_ctrl input {
+    width: 100%;
+}
+
+.inp_ctrl input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+.submit_btn button {
+    margin-top: 1rem;
+    width: 200px;
+    height: 45px;
+    background-color: var(--primary);
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    color: var(--textAlt);
+}
+
+.forget {
+    color: var(--textAlt);
+    text-decoration: underline;
+    cursor: pointer;
+}

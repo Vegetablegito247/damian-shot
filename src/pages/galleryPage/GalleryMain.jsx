@@ -47,6 +47,43 @@ function GalleryMain() {
                     </motion.div>
                 </div>
 
+                <div className="view_services_pricing">
+                    <div className="view_services_pricing_cont">
+                        <div className="view_services_pricing_img">
+                            <motion.img
+                                initial={{ scale: 0, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                viewport={{ once: true }}
+                                src={girlCam} alt="View Services and Pricing" />
+                        </div>
+                        <div className="view_services_pricing_info">
+                            <motion.h3
+                                initial={{ y: 100, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                            >Services and Pricing</motion.h3>
+                            <motion.p
+                                initial={{ y: 100, opacity: 0 }}
+                                transition={{ delay: .8, duration: 1, type: 'tween' }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                            >
+                                Explore our range of photography services and pricing options to find the perfect fit for your needs. Whether you're looking for individual sessions, family portraits, or corporate headshots, we've got you covered.
+                            </motion.p>
+                            <motion.div
+                                initial={{ y: 100, opacity: 0 }}
+                                transition={{ delay: .6, duration: 1, type: 'tween' }}
+                                whileInView={{ y: 0, opacity: 1 }}
+                                viewport={{ once: true }}
+                                className="view_services_pricing_link">
+                                <Link to="/pricing">Check Pricing</Link>
+                            </motion.div>
+                        </div>
+                    </div>
+                </div>
+
                 <div className="marquee">
                     <div className="marquee_list">
                         <RiCameraLensLine className='marq_icon' />
@@ -115,7 +152,7 @@ function GalleryMain() {
                     </div>
                 </div>
 
-                <div className="view_services_pricing">
+                {/* <div className="view_services_pricing">
                     <div className="view_services_pricing_cont">
                         <div className="view_services_pricing_img">
                             <motion.img
@@ -150,7 +187,7 @@ function GalleryMain() {
                             </motion.div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </main>
     )

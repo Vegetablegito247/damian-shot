@@ -41,16 +41,31 @@ footer,
 
 .foot_main_form form {
     width: 100%;
-    align-items: center;
-    column-gap: 10px;
+    flex-direction: column;
+    row-gap: 10px;
 }
 
-.inp_ctrl input {
+.form_inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+}
+
+.inp_ctrl_msg input {
     width: 300px;
-    height: 50px;
+    height: 40px;
     border: none;
     outline: none;
     padding: 10px;
+}
+
+.inp_ctrl_msg textarea {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    outline: none;
+    border: none;
 }
 
 .form_btn button {
@@ -66,9 +81,14 @@ footer,
 .foot_main_links,
 .foot_main_social {
     width: 20%;
-    justify-content: center;
     flex-direction: column;
     row-gap: 10px;
+}
+
+.foot_main_list,
+.foot_social_list {
+    text-decoration: none;
+    color: var(--textAlt);
 }
 
 .foot_social_list {
@@ -112,14 +132,17 @@ footer,
     }
 
     .form_inputs {
-        width: 70%;
+        width: 100%;
     }
 
     .form_btn {
-        width: 30%;
+        width: 200px;
     }
 
-    .inp_ctrl, .inp_ctrl input, .form_btn button {
+    .inp_ctrl_msg,
+    .inp_ctrl_msg input,
+    .inp_ctrl_msg textarea,
+    .form_btn button {
         width: 100%;
     }
 
@@ -130,7 +153,9 @@ footer,
 }
 
 @media (max-width: 780px) {
-    .foot_main, .foot_bottom {
+
+    .foot_main,
+    .foot_bottom {
         padding: 2rem 3rem;
     }
 }
@@ -143,7 +168,9 @@ footer,
 }
 
 @media (max-width: 575px) {
-    .foot_main, .foot_bottom {
+
+    .foot_main,
+    .foot_bottom {
         padding: 2rem 20px;
     }
 

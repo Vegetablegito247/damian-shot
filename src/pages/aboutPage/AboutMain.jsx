@@ -66,7 +66,7 @@ function AboutMain() {
               <motion.p
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{once: true}}
+                viewport={{ once: true }}
               >
                 Damian Glory Chiderah epitomizes dedication and versatility in her professional pursuits. With a solid foundation in microbiology, Damian's academic journey is marked by a relentless pursuit of knowledge and growth. Currently immersing herself in the intricacies of kinesiology and health, Damian demonstrates a commitment to understanding the human body and promoting well-being. This academic trajectory reflects her unwavering determination to excel and make meaningful contributions to the fields she explores.
               </motion.p>
@@ -74,7 +74,7 @@ function AboutMain() {
               <motion.p
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{once: true}}
+                viewport={{ once: true }}
               >
                 In addition to her scientific endeavors, Damian possesses a creative flair that knows no bounds. Armed with a diploma in web development and graphics design, she delved into the world of photography, discovering a profound passion fueled by imagination. Her lens becomes a canvas, where moments are not merely captured but transformed into art. Damian's unique talent lies in her ability to infuse photographs with an essence that transcends reality, crafting captivating narratives that resonate deeply with viewers.
               </motion.p>
@@ -82,10 +82,47 @@ function AboutMain() {
               <motion.p
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                viewport={{once: true}}
+                viewport={{ once: true }}
               >
                 Beyond her professional and creative pursuits, Damian's character shines through in her interactions with others. Known for her resilience in the face of challenges, Damian embodies the spirit of perseverance and grit. Yet, it is her genuine kindness and passion for life that truly define her. Whether through her work, her art, or her everyday interactions, Damian leaves an indelible mark, inspiring those around her to embrace their own potential and pursue their passions with unwavering enthusiasm.
               </motion.p>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      <div className="view_services_pricing">
+        <div className="view_services_pricing_cont">
+          <div className="view_services_pricing_img">
+            <motion.img
+              initial={{ scale: 0, opacity: 0 }}
+              transition={{ delay: .6, duration: 1, type: 'tween' }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              src={girlCam} alt="View Services and Pricing" />
+          </div>
+          <div className="view_services_pricing_info">
+            <motion.h3
+              initial={{ y: 100, opacity: 0 }}
+              transition={{ delay: .6, duration: 1, type: 'tween' }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+            >Services and Pricing</motion.h3>
+            <motion.p
+              initial={{ y: 100, opacity: 0 }}
+              transition={{ delay: .8, duration: 1, type: 'tween' }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+            >
+              Explore our range of photography services and pricing options to find the perfect fit for your needs. Whether you're looking for individual sessions, family portraits, or corporate headshots, we've got you covered.
+            </motion.p>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              transition={{ delay: .6, duration: 1, type: 'tween' }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="view_services_pricing_link">
+              <Link to="/pricing">Check Pricing</Link>
             </motion.div>
           </div>
         </div>
@@ -135,7 +172,7 @@ function AboutMain() {
                 <motion.div
                   initial={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{once: true}}
+                  viewport={{ once: true }}
                   key={index} className="faq">
                   <div onClick={() => faqDisplay(index)} className="question">
                     <h3>{faqs.question}</h3>
@@ -176,7 +213,7 @@ function AboutMain() {
         </div>
       </div>
 
-      <div className="view_services_pricing">
+      {/* <div className="view_services_pricing">
         <div className="view_services_pricing_cont">
           <div className="view_services_pricing_img">
             <motion.img
@@ -211,7 +248,7 @@ function AboutMain() {
             </motion.div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }

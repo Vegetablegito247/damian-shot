@@ -8,9 +8,6 @@ import family3 from '../../assets/landPageImg/family3.png';
 import model2 from '../../assets/landPageImg/model2.png';
 import model3 from '../../assets/landPageImg/model3.png';
 import girlCam from '../../assets/landPageImg/girl_cam1.png';
-import Slider from "react-slick";
-import PrevArrow from '../../util/PrevArrow';
-import NextArrow from '../../util/NextArrow';
 import { RiCameraLensLine } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
 import { motion } from 'framer-motion';
@@ -61,143 +58,6 @@ function LandMain() {
         }
     ];
 
-    const photographySessions = [
-        {
-            id: 1,
-            type: "Individual/Couples Session",
-            description: "1 - 2 outfits, 1 - 2 people, 45 mins",
-            price: "$150",
-            retouchedPhotos: 12,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalTime: "$100/hr",
-            additionalRetouchedPhotos: "$5",
-            additionalOutfit: "$25",
-            logistics: "Logistics (For home / outdoor locations) - $40"
-        },
-        {
-            id: 2,
-            type: "Family/Group Session",
-            price: "$200",
-            description: "1 - 2 outfits, Up to 10 people, 1 hour",
-            retouchedPhotos: 15,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalHour: "$100",
-            additionalRetouchedPhotos: "$10",
-            additionalOutfit: "$25",
-            logistics: "Outdoor/Home service - $45"
-        },
-        {
-            id: 3,
-            type: "Maternity session",
-            price: "$250",
-            description: "Studio session, Up to 3 outfits, 90 mins",
-            retouchedPhotos: 14,
-            friendsAndFamily: "Friends/ Family can join in the shoot",
-            galleryAccess: "Full gallery access for photo selection",
-            additionalHour: "$100",
-            additionalRetouchedPhotos: "$5",
-            additionalOutfit: "$5"
-        },
-        {
-            id: 4,
-            type: "Photography (Small Events)",
-            price: "$150",
-            description: "Up to 80 guests, 60 Minutes",
-            retouchedPhotos: "Up to 70 edited photos",
-            additionalHour: "$100"
-        },
-        {
-            id: 5,
-            type: "Kids Session (Age 1-5)",
-            price: "$200",
-            description: "60 Minutes shoot time, 2- 4 outfits, Creative set",
-            retouchedPhotos: 15,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalTime: "$100/hr",
-            additionalRetouchedPhotos: "$5",
-            additionalOutfit: "$25"
-        },
-        {
-            id: 6,
-            type: "Mini Session",
-            price: "$100",
-            description: "1 outfit, 1 person, 45 minutes",
-            retouchedPhotos: 8,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalRetouchedPhotos: "$5",
-            logistics: "Logistics (For home / outdoor locations) - $40"
-        },
-        {
-            id: 7,
-            type: "Corporate Headshots",
-            price: "$100",
-            description: "40 minutes, 1 outfit change/update",
-            retouchedPhotos: 6,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalRetouchedPhotos: "$5",
-            logistics: "Logistics (For home / outdoor locations) - $40"
-        },
-        {
-            id: 8,
-            type: "Large Group Sessions",
-            description: "up to 3 outfits, 6 - 11 people, 1 hour",
-            price: "$300",
-            retouchedPhotos: 16,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalHour: "$100",
-            additionalRetouchedPhotos: "$5",
-            additionalOutfit: "$25"
-        },
-        {
-            id: 9,
-            type: "Creative / Anime shoots",
-            description: "up to 2 outfits",
-            price: "$170",
-            retouchedPhotos: 10,
-            galleryAccess: "Full gallery access for photo selection",
-            additionalHour: "$100",
-            additionalRetouchedPhotos: "$10",
-            additionalOutfit: "$30"
-        }
-    ];
-
-    const settings = {
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        prevArrow: <PrevArrow />,
-        nextArrow: <NextArrow />,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
     return (
         <main style={{ overflow: 'hidden' }}>
             <div className="about">
@@ -230,6 +90,43 @@ function LandMain() {
                             <Link to='/about'>
                                 <span>More About Damian</span>
                             </Link>
+                        </motion.div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="view_services_pricing">
+                <div className="view_services_pricing_cont">
+                    <div className="view_services_pricing_img">
+                        <motion.img
+                            initial={{ scale: 0, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ scale: 1, opacity: 1 }}
+                            viewport={{ once: true }}
+                            src={girlCam} alt="View Services and Pricing" />
+                    </div>
+                    <div className="view_services_pricing_info">
+                        <motion.h3
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >Services and Pricing</motion.h3>
+                        <motion.p
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .8, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                        >
+                            Explore our range of photography services and pricing options to find the perfect fit for your needs. Whether you're looking for individual sessions, family portraits, or corporate headshots, we've got you covered.
+                        </motion.p>
+                        <motion.div
+                            initial={{ y: 100, opacity: 0 }}
+                            transition={{ delay: .6, duration: 1, type: 'tween' }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            className="view_services_pricing_link">
+                            <Link to="/pricing">Check Pricing</Link>
                         </motion.div>
                     </div>
                 </div>
@@ -479,7 +376,7 @@ function LandMain() {
                 </div>
             </div>
 
-            <div className="view_services_pricing">
+            {/* <div className="view_services_pricing">
                 <div className="view_services_pricing_cont">
                     <div className="view_services_pricing_img">
                         <motion.img
@@ -513,43 +410,6 @@ function LandMain() {
                             <Link to="/pricing">Check Pricing</Link>
                         </motion.div>
                     </div>
-                </div>
-            </div>
-
-            {/* <div className="price_and_service">
-                <div className="price_and_service_cont">
-                    <div className="price_and_service_head">
-                        <h1>PRICING AND SERVICES</h1>
-                    </div>
-                    <Slider {...settings} className="price_and_service_carousel">
-                        {
-                            photographySessions.map((photo, index) => (
-                                <div key={index} className="price_and_service_list">
-                                    <div className="price_and_service_image">
-                                        <img src={baby1} alt="" />
-                                    </div>
-                                    <div className="price_and_service_info">
-                                        <div className="price_and_service_info_head">
-                                            <h3>{photo.type}</h3>
-                                        </div>
-                                        <div className="price_and_service_info_details">
-                                            <ul>
-                                                <li>{photo.description}</li>
-                                                <li>{photo.price}</li>
-                                                <li>{photo.retouchedPhotos} retouched photos</li>
-                                                {photo.galleryAccess && <li>{photo.galleryAccess}</li>}
-                                                {photo.additionalTime && <li>Additional time: {photo.additionalTime}</li>}
-                                                {photo.additionalRetouchedPhotos && <li>Additional retouched photos: {photo.additionalRetouchedPhotos}</li>}
-                                                {photo.additionalOutfit && <li>Additional outfit: {photo.additionalOutfit}</li>}
-                                                {photo.logistics && <li>{photo.logistics}</li>}
-                                                {photo.friendsAndFamily && <li>{photo.friendsAndFamily}</li>}
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
-                        }
-                    </Slider>
                 </div>
             </div> */}
         </main>
