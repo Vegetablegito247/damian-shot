@@ -1,11 +1,28 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { GrGallery } from "react-icons/gr";
 import { FaUserCircle } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { fetchMessages } from '../../../store/message';
 import { BiMessageDetail, BiLogOut } from 'react-icons/bi';
 import './style.css';
+import { fetchGallery } from '../../../store/gallery';
+import { logoutUser } from '../../../store/user';
 
 function DisplayDashboard({ openMenu, handleSideMenu }) {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+        dispatch(fetchMessages());
+        dispatch(fetchGallery());
+    }, [dispatch]);
+
+    const handleLogout = () => {
+        dispatch(logoutUser());
+        navigate('/');
+    }
 
     return (
         <div className="displayBoard">
@@ -38,12 +55,12 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
                         <h3>Damian Chidra</h3>
                     </div>
                     <div className="acctSettings">
-                        <NavLink to='/login'>
+                        <div className='logout' onClick={handleLogout}>
                             <div className="acctIcon">
                                 <BiLogOut />
                             </div>
                             <span>Log out</span>
-                        </NavLink>
+                        </div>
                     </div>
                 </div>
             </div>

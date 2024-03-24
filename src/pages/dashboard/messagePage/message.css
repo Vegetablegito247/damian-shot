@@ -75,6 +75,7 @@
     grid-template-columns: 6fr 6fr;
     column-gap: 10px;
     row-gap: 10px;
+    width: 100%;
 }
 
 .newMsgHead,
@@ -95,6 +96,7 @@
     background-color: var(--primary);
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
     text-decoration: none;
     color: #ffffff;
 }

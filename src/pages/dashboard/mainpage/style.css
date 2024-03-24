@@ -4,7 +4,7 @@
 .mainMenu a,
 .account,
 .acctSettings,
-.acctSettings a,
+.logout,
 .acctIcon,
 .sideIcon,
 .acctHolder {
@@ -40,7 +40,7 @@
 }
 
 .mainMenu a,
-.acctSettings a {
+.logout {
     align-items: center;
     column-gap: 10px;
     text-decoration: none;
@@ -53,12 +53,11 @@
 }
 
 .mainMenu a:hover,
-.acctSettings a:hover {
+.logout:hover {
     background-color: #0030678e;
 }
 
-.mainMenu a.active,
-.acctSettings a.active {
+.mainMenu a.active {
     background-color: var(--primary);
     border: none;
 }

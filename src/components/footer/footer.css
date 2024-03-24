@@ -68,6 +68,12 @@ footer,
     border: none;
 }
 
+.err-msg {
+    color: red;
+    font-size: 12px;
+    transition: .7s;
+}
+
 .form_btn button {
     width: 200px;
     height: 50px;

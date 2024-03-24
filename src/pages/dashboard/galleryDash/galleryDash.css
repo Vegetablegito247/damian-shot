@@ -30,11 +30,12 @@
     font-size: 20px;
 }
 
-.no_img button {
+.no_img button, .add_btn_img button {
     width: 200px;
     height: 40px;
     color: var(--textAlt);
     background-color: var(--primary);
+    box-shadow: -5px 5px 0 var(--textAlt);
     border: none;
     font-weight: 600;
     font-size: 16px;
@@ -72,14 +73,125 @@
     position: absolute;
 }
 
+.add_img_cont {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.add_img_cont span {
+    height: 30px;
+    width: fit-content;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    background-color: var(--primary);
+}
+
+.add_img_icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--textAlt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+}
+
+.add_img_form {
+    width: 500px;
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--secondary);
+    box-shadow: -5px 5px 0 var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 35%;
+    left: -100vw;
+    transition: left .7s;
+}
+
+.add_img_form.active {
+    left: 35%;
+}
+
+.close_img_form {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--textAlt);
+    color: var(--textAlt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-left: auto;
+}
+
+.add_btn_img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.img_add_cont {
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.378);
+    transition: left .7s;
+}
+
+.img_add_cont.active {
+    left: 0;
+}
+
+.img_close {
+    font-size: 25px;
+}
+
+@media (max-width: 925px) {
+    .add_img_form.active {
+        left: 15%;
+    }
+}
+
 @media (max-width: 500px) {
     .gallery_img {
         grid-template-columns: 6fr 6fr;
+    }
+
+    .add_img_form {
+        width: 80%;
+    }
+
+    .add_img_form.active {
+        left: 15%;
     }
 }
 
 @media (max-width: 425px) {
     .gallery_img {
         grid-template-columns: 12fr;
+    }
+
+    .add_img_form {
+        width: 80%;
+    }
+
+    .add_img_form.active {
+        left: 10%;
     }
 }

@@ -1,10 +1,63 @@
-import React from 'react';
-import { FaInstagram, FaTiktok, FaXTwitter } from "react-icons/fa6";
+import React, { useState } from 'react';
+import { FaInstagram, FaTiktok } from "react-icons/fa6";
+import { useDispatch } from 'react-redux';
+import { postMessage } from '../../store/message';
 import './footer.css';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 
 function Footer() {
+    const dispatch = useDispatch();
+
+    const [messageData, setMessageData] = useState({
+        clientEmail: '',
+        clientMsg: ''
+    })
+    const [error, setError] = useState({});
+
+    const validateMsg = () => {
+        const newErrors = {};
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!messageData.clientEmail.trim()) {
+            newErrors.email = 'Email account is required';
+        }
+        else if (!emailPattern.test(messageData.clientEmail.trim())) {
+            newErrors.email = 'Invalid email address';
+        }
+
+        if (!messageData.clientMsg.trim()) {
+            newErrors.message = 'Message field is required';
+        }
+        else if (messageData.clientMsg.length < 100) {
+            newErrors.message = 'Message must be at least 100 characters';
+        }
+
+        setError(newErrors);
+        return Object.keys(newErrors).length === 0;
+    }
+
+    const msgSubmit = (e) => {
+        e.preventDefault();
+
+        if (validateMsg()) {
+            dispatch(postMessage(messageData));
+            toast.success('Message sent successfully');
+            setMessageData({ clientEmail: '', clientMsg: '' });
+        }
+        else {
+            toast.warning('Please correct the error in the form');
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setMessageData({
+            ...messageData,
+            [name]: value
+        });
+    };
 
     return (
         <footer id='contact'>
@@ -15,13 +68,24 @@ function Footer() {
                             <h3>Would you like to send us a message?</h3>
                             <p>Let us know your thoughts or inquiries. We'd love to hear from you!</p>
                         </div>
-                        <form action="">
+                        <form action="" onSubmit={msgSubmit}>
                             <div className="form_inputs">
                                 <div className="inp_ctrl_msg">
-                                    <input type="email" placeholder='Your Email' />
+                                    <input
+                                        type="email"
+                                        name="clientEmail"
+                                        onChange={handleChange}
+                                        placeholder='Your Email'
+                                    />
+                                    {error.email && <span className='err-msg'>{error.email}</span>}
                                 </div>
                                 <div className="inp_ctrl_msg">
-                                    <textarea name="" placeholder='Your Message'></textarea>
+                                    <textarea
+                                        name="clientMsg"
+                                        onChange={handleChange}
+                                        placeholder='Your Message'
+                                    ></textarea>
+                                    {error.message && <span className='err-msg'>{error.message}</span>}
                                 </div>
                             </div>
                             <div className="form_btn">
